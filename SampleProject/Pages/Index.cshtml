@@ -1,0 +1,98 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "SpotNLog";
+}
+
+<div class="jumbotron jumbotron-fluid" id="chef-jumbotron">
+
+
+    <h1>Trains | Singapore</h1>
+    <p>A place for you to log your spotting</p>
+</div>
+
+
+<div class="row">
+    <div class="col">
+        <h2>Submit a new record</h2>
+        <hr>
+        <!-- Form start -->
+        <form method="post">
+            <div class="form-group">
+                <label for="Trainset"><b>Trainset*</b></label>
+                <input type="int" class="form-control" id="Trainset" name="Trainset" placeholder="Enter Trainset">
+            </div><br />
+
+
+
+            <div class="form-group">
+                <label for="Line"><b>Line</b></label>
+                <select class="form-control" id="Line" name="Line">
+
+                    <option>@Model.Line</option>
+                    <option>@Model.Line2</option>
+
+                </select>
+            </div><br />
+
+
+            <div class="form-group">
+                <label for="Date"><b>If backdated, please enter date (leave blank if not backdated)</b></label>
+                <input type="date" class="form-control" id="Date" name="Date">
+            </div><br />
+
+
+
+            <h3>Journey information (optional)</h3>
+
+            <div class="form-group">
+                <label for="Run Number"><b>Run Number</b></label>
+                <input type="number" class="form-control" id="RunNo" name="RunNo" placeholder="Run Number">
+            </div><br />
+
+            <div class="form-check form-check-inline">
+                <label for="Route"><b>Route</b></label>
+                <select class="form-control" id="Line" name="Line" placeholder="Depart">
+                    <option>NS1 Jurong East</option>
+                    <option>EWL</option>
+                    <option>NEL</option>
+                </select>
+
+                <select class="form-control" id="Line" name="Line" placeholder="Arrive">
+                    <option>NS1 Jurong East</option>
+                    <option>EWL</option>
+                    <option>NEL</option>
+                </select>
+            </div><br /><br />
+
+
+
+            <div class="form-group">
+                <label for="Remarks"><b>Remarks</b></label>
+                <textarea class="form-control" rows="3" class="form-control" id="Remarks" name="Remarks" placeholder="Remarks"></textarea>
+            </div>
+
+
+            <button type="submit" class="btn btn-secondary" id="submit">Submit</button><br />
+        </form>
+
+        <!-- Form end -->
+    </div>
+
+    <div class="col">
+        <h2>Recent spotting records</h2>
+        <hr>
+        <!-- Page model properties displayed here -->
+        <div class="blog-post">
+            <p>Trainset: @Model.DisplayTrainset</p>
+            <p>Rolling Stock: @Model.RollingStock</p>
+            <p>Line: @Model.Line</p>
+            <p>Run Number: T @Model.DisplayRunNo</p>
+            <p class="blog-post-meta">Spotted on: @Model.Date.ToShortDateString()</p>
+            <p>Remarks: @Model.Remarks</p>
+            <button type="submit" class="btn btn-secondary" id="submit">Generate Report</button>
+
+
+        </div>
+    </div>
+</div>
