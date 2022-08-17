@@ -25,9 +25,26 @@
             {
                 <p class="description">@trainsetLog.DisplayTrainset</p>    
                 <p class="description">@trainsetLog.RollingStock</p>
+
             
             }
 
+               <form method="post">
+  <div class="form-group row">  
+            <div class="col-4"> 
+                <label asp-for="TrainsetLog.Trainset"></label>  
+            </div>  
+            <div class="col-6">  
+                <input asp-for="TrainsetLog.Trainset" class="form-control" />  
+            </div>  
+              <div class="form-group row">  
+            <div class="col-3 offset-4">  
+                <input type="submit" value="Create" class="btn btn-primary form-control" />  
+            </div>  
+        </div>  
+  </form>
+
+             
 
 
             
