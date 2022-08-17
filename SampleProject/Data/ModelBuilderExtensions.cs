@@ -18,9 +18,6 @@ namespace SampleProject.Data
                     RollingStock = "C151B",
                     Line = "NSL",
                     Line2 = "EWL",
-                    Date = DateTime.Now,
-                    RunNo = 211,
-                    DisplayRunNo = "T211",
                     Remarks = "Train"
 
                     /* public int Trainset { get; set; }
@@ -47,10 +44,6 @@ namespace SampleProject.Data
                     DisplayTrainset = "223/224",
                     RollingStock = "C651",
                     Line = "NSL",
-                    Line2 = "EWL",
-                    Date = DateTime.Now,
-                    RunNo = 211,
-                    DisplayRunNo = "T211",
                     Remarks = "Train"
                 }
                   );
