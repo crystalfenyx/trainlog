@@ -18,8 +18,13 @@ namespace SampleProject.Pages
         public IndexModel(TrainsetLogContext db) => this.db = db;
         public List<TrainsetLog> TrainsetLogs { get; set; } = new List<TrainsetLog>();
 
+        public List<SpottingRecord> SpottingRecords { get; set; } = new List<SpottingRecord>();
+
         [BindProperty] 
         public TrainsetLog TrainsetLog { get; set; }
+
+        [BindProperty]
+        public SpottingRecord SpottingRecord { get; set; }
 
         public TrainsetLog FeaturedTrain { get; set; }
         public async Task OnGetAsync()

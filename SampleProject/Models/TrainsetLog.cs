@@ -14,5 +14,7 @@ namespace SampleProject.Models
         public string? Line { get; set; }
         public string? Line2 { get; set; }
         public string? Remarks { get; set; }
+
+        public List<SpottingRecord> SpottingRecords { get; set; }
     }
 }

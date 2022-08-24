@@ -8,6 +8,7 @@ namespace SampleProject.Data
     {
         public static ModelBuilder Seed(this ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<TrainsetLog>().HasData(
                 new TrainsetLog
                 {
