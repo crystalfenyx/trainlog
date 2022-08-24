@@ -16,6 +16,7 @@ namespace SampleProject.Pages
 
         private readonly TrainsetLogContext db;
         public IndexModel(TrainsetLogContext db) => this.db = db;
+
         public List<TrainsetLog> TrainsetLogs { get; set; } = new List<TrainsetLog>();
 
         public List<SpottingRecord> SpottingRecords { get; set; } = new List<SpottingRecord>();
@@ -27,10 +28,20 @@ namespace SampleProject.Pages
         public SpottingRecord SpottingRecord { get; set; }
 
         public TrainsetLog FeaturedTrain { get; set; }
+
         public async Task OnGetAsync()
         {
             TrainsetLogs = await db.TrainsetLogs.ToListAsync();
-         
+            SpottingRecords = await db.SpottingRecords.ToListAsync();
+
+        }
+
+        public void AddZero()
+        {
+            if (TrainsetLog.Trainset <= 99)
+            {
+                TrainsetLog.DisplayTrainset = $"0{TrainsetLog.Trainset3}/0{TrainsetLog.Trainset2}";
+            }
         }
 
         public void GetRollingStock()
@@ -96,13 +107,21 @@ namespace SampleProject.Pages
             {
 
             }
-           
 
 
-       TrainsetLog.DisplayTrainset = $"{TrainsetLog.Trainset3}/{TrainsetLog.Trainset2}";
+            if (TrainsetLog.Trainset <= 99)
+            {
+                TrainsetLog.DisplayTrainset = $"0{TrainsetLog.Trainset3}/0{TrainsetLog.Trainset2}";
+            }
+
+            else
+            {
+                TrainsetLog.DisplayTrainset = $"{TrainsetLog.Trainset3}/{TrainsetLog.Trainset2}";
+            }
 
             await db.TrainsetLogs.AddAsync(TrainsetLog);
-                await db.SaveChangesAsync();
+            await db.SpottingRecords.AddAsync(SpottingRecord);
+            await db.SaveChangesAsync();
                 return RedirectToPage("Index");
 
             }

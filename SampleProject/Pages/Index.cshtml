@@ -20,43 +20,57 @@
         <!-- Page model properties displayed here -->
         <div class="blog-post">
 
+
+
             @foreach (var trainsetLog in Model.TrainsetLogs)
 
             {
-                <p class="description">@trainsetLog.DisplayTrainset</p>    
-                <p class="description">@trainsetLog.RollingStock</p>
+                <p>@trainsetLog.DisplayTrainset | @trainsetLog.RollingStock</p>
 
-            
+
             }
 
-              @foreach (var spottingRecord in Model.SpottingRecords)
+            @foreach (var spottingRecord in Model.SpottingRecords)
 
             {
-                <p class="description">@spottingRecord.SpottingRecordID</p>    
-                
+                <p>@spottingRecord.SpottingRecordID</p>
 
-            
             }
 
-               <form method="post">
-  <div class="form-group row">  
-            <div class="col-4"> 
-                <label asp-for="TrainsetLog.Trainset"></label>  
-            </div>  
-            <div class="col-6">  
-                <input asp-for="TrainsetLog.Trainset" class="form-control" />  
-            </div>  
-              <div class="form-group row">  
-            <div class="col-3 offset-4">  
-                <input type="submit" value="Create" class="btn btn-primary form-control" />  
-            </div>  
-        </div>  
-  </form>
 
-             
+            <form method="post">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="TrainsetLog.Trainset"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="TrainsetLog.Trainset" class="form-control" />
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3 offset-4">
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-4">
+                                <label asp-for="SpottingRecord.SpottingRecordID"></label>
+                            </div>
+                            <div class="col-6">
+                                <input asp-for="SpottingRecord.SpottingRecordID" class="form-control" />
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-3 offset-4">
+                                    <input type="submit" value="Create" class="btn btn-primary form-control" />
+                                </div>
+
+                            </div>
+            </form>
 
 
-            
+
+
+
+
         </div>
 
         </div>

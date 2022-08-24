@@ -19,7 +19,7 @@ namespace SampleProject.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new TrainsetLogConfiguration()).Seed();
-           modelBuilder.ApplyConfiguration(new TrainsetLogConfiguration()).Seed2();
+          modelBuilder.ApplyConfiguration(new TrainsetLogConfiguration()).Seed2();
 
            modelBuilder.Entity<SpottingRecord>()
               .HasOne(p => p.TrainsetLog)

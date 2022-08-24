@@ -1,4 +1,37 @@
 ﻿<Properties StartupConfiguration="{CBCF30C8-701B-4659-ACCF-420D69D4FBBE}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.SampleProject FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.SampleProject PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="SampleProject/Pages/Index.cshtml.cs">
+    <Files>
+      <File FileName="SampleProject/Models/SpottingRecord.cs" Line="1" Column="1" />
+      <File FileName="SampleProject/Data/SpottingRecordExtensions.cs" Line="18" Column="1" />
+      <File FileName="SampleProject/Data/ModelBuilderExtensions.cs" Line="49" Column="18" />
+      <File FileName="SampleProject/Data/TrainsetLogContext.cs" Line="22" Column="11" />
+      <File FileName="SampleProject/Pages/Index.cshtml" Line="38" Column="14" />
+      <File FileName="SampleProject/Pages/Index.cshtml.cs" Line="105" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SampleProject" expanded="True">
+            <Node name="SampleProject" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Index.cshtml" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
