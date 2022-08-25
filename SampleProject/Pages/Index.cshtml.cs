@@ -109,9 +109,14 @@ namespace SampleProject.Pages
             }
 
 
-            if (TrainsetLog.Trainset <= 99)
+            if (TrainsetLog.Trainset >= 11 && TrainsetLog.Trainset <= 99)
             {
                 TrainsetLog.DisplayTrainset = $"0{TrainsetLog.Trainset3}/0{TrainsetLog.Trainset2}";
+            }
+
+            else if (TrainsetLog.Trainset >= 0 && TrainsetLog.Trainset <= 10)
+            {
+                TrainsetLog.DisplayTrainset = $"00{TrainsetLog.Trainset3}/00{TrainsetLog.Trainset2}";
             }
 
             else
